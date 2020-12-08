@@ -1,0 +1,18 @@
+default: &default
+ adapter: mysql2
+ encoding: utf8mb4
+ pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+ username: root
+ password: '@asFay4563'
+ socket: /var/lib/mysql/mysql.sock
+development:
+ <<: *default
+ database: smar_app_development
+test:
+ <<: *default
+ database: smar_app_test
+production:
+ <<: *default
+ database: smar_app_production
+#  username: smar_app
+#  password: <%= ENV['SMAR_APP_DATABASE_PASSWORD'] %>
