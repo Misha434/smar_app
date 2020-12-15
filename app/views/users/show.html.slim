@@ -1,5 +1,23 @@
 - provide(:title, @user.name)
 
-h1 = @user.name 
-  = gravatar_for @user
-p = @user.email
+div.container
+  div.row
+    div.col-4
+      = gravatar_for @user
+    div.col-8 
+      div.container
+        h1
+          = @user.name
+        p
+          = @user.email
+div.container
+  div.row
+    div.col-4
+      h3 Posts
+      p xxx
+    div.col-4
+      h3 Like
+      p xxx
+    div.col-4
+      h3 follow
+      p xxx
