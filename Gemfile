@@ -5,6 +5,8 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
+# Use bootstap-sass as CSS Framework
+gem 'bootstrap-sass'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4'
 # Use Puma as the app server
@@ -13,6 +15,7 @@ gem 'puma', '~> 4.1'
 gem 'sassc-rails'
 # Use slim as HTML Template engine
 gem 'slim-rails'
+
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'

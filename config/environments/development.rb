@@ -62,4 +62,8 @@ Rails.application.configure do
 
   # Cloud9 への接続を許可する
   config.hosts.clear
+
+  # rails-sassc 設定
+  config.sass.inline_source_maps = true
+
 end
