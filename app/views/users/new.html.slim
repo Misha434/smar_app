@@ -1,2 +1,36 @@
-h1 Users#new
-p Find me in app/views/users/new.html.slim
+- provide(:title,'Sign Up')
+
+h1.mx-4 ユーザー登録
+
+.row
+  .col-6.col-offset-3
+    = form_with(model: @user, local: true) do |f|
+      == render 'shared/error_messages'
+      / ユーザー名
+      = f.label :user_name
+      = f.text_field :user_name, class: 'form-control'
+      / 氏名
+      .col-6
+        = f.label :name
+        = f.text_field :name, class: 'form-control'
+      / E-mail アドレス
+      .col-6
+        = f.label :email
+        = f.text_field :email, class: 'form-control'
+      / 生年月日
+      .col-6
+        = f.label :birthday
+        = f.text_field :birthday, class: 'form-control'
+        p 例:1990年1月11日
+        p 1990-01-11
+      / パスワード
+      .col-6
+        = f.label :password
+        = f.text_field :password, class: 'form-control'
+      / パスワード再入力
+      .col-6
+        = f.label :password_confirmation, "Confirm"
+        = f.text_field :password_confirmation, class: 'form-control'
+      / ボタン
+      .col-6
+        = f.submit class: "btn btn-primary mx-4 my-4"
