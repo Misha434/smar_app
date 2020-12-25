@@ -7,9 +7,10 @@ class SessionsController < ApplicationController
     if user &.authenticate(params:[:session][:password])
       log_in user
       redirect_to user
-  else
-    flash.now[:denger] = 'Emailかパスワードが違います'
-    render 'new'
+    else
+      flash.now[:denger] = 'Emailかパスワードが違います'
+      render 'new'
+    end
   end
 
   def destroy
