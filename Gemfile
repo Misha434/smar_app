@@ -15,6 +15,12 @@ gem 'puma', '~> 4.1'
 gem 'sassc-rails'
 # Use slim as HTML Template engine
 gem 'slim-rails'
+# Use pagenate
+gem 'kaminari'
+# Use kaminari for Bootstrap4  
+gem 'kaminari-bootstrap'
+# Use creating user-data
+gem 'faker'
 
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
