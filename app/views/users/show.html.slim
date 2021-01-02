@@ -21,3 +21,7 @@ div.container
     div.col-4
       h3 follow
       p xxx
+
+- if current_user.admin?
+  .container
+    = link_to "Show All User", users_path
