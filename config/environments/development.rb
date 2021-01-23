@@ -33,6 +33,11 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
+  #config.action_mailer.preview_path = "#{Rails.root}/test/mailers/previews"
+  host = 'dfa0b52b592c45f397df115d09bbbb6d.vfs.cloud9.ap-northeast-1.amazonaws.com'
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { host: host, protocol: 'https'}
+
 
   config.action_mailer.perform_caching = false
 

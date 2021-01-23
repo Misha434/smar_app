@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def index
     # @users = User.all
-    @users = User.page(params[:page]).per(10)
+    @users = User.where(activated: true).page(params[:page]).per(10)
   end
 
   def show
@@ -19,9 +19,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = "登録完了しました"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url and return unless @user.activated?
     else
       render 'new'
     end
