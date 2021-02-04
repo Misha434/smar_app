@@ -4,10 +4,10 @@ default: &default
  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
  username: user_004
  password: '@asFay4563'
- socket: /var/run/mysqld/mysqld.sock
 development:
  <<: *default
  database: smar_app_development
+ socket: /var/run/mysqld/mysqld.sock
 test:
  <<: *default
  database: smar_app_test
