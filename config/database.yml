@@ -2,12 +2,12 @@ default: &default
  adapter: mysql2
  encoding: utf8mb4
  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
- username: user_004
- password: '@asFay4563'
 development:
  <<: *default
  database: smar_app_development
  socket: /var/run/mysqld/mysqld.sock
+ username: user_004
+ password: '@asFay4563'
 test:
  <<: *default
  database: smar_app_test
